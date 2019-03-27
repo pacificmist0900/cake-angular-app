@@ -1,13 +1,14 @@
 # Cake-application-angular
 
 This is an angular ui app backed by spring boot web ap which serves end points to manage cake resource.
+Cake-ui is the angular app and cake-service is the spring web app that exposes rest api's.
 
  
 ## End points
 
 Cake-service application has 5 end points and all are prefixed with /api.
 
--  Url '/api' and '/api/cakes' returns lits of cakes in HTML content (Served by CakeController.class)
+-  Url '/api' and '/api/cakes' returns lits of cakes. (Served by CakeController.class)
 - Post to '/api/cake' end point creates a new cake. (Served by CakeRestController.class) 
   Input json to create cake is  
   ```json
@@ -48,7 +49,7 @@ on localhost:8085
 ### How to build 
 
 Download the code using https://github.com/pacificmist0900/cake-application-angular.git.
- - mvn clean install. This creates the spring boot jar with angular app (in static folder) in cake-service/target
+ - mvn clean install. This creates the fat spring boot jar with angular app (in static folder) in cake-service/target
  - ```docker build -t cake-waracle .``` builds docker image. This should be run from cake-application-angular root.
  - To run Docker image, run ```docker run -p 5000:8085 cake-waracle ```. This starts the app on localhost:5000
 
