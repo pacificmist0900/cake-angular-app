@@ -1,0 +1,7 @@
+databaseChangeLog:
+  - include:
+      file: 01-creates-cakes.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 02-insert-cakes.yaml
+      relativeToChangelogFile: true

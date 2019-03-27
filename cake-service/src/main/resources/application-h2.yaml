@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:cakesdb;INIT=CREATE SCHEMA IF NOT EXISTS cakesdb\;SET SCHEMA cakesdb;
+    driver-class-name: org.h2.Driver
+    username: CAKES_DB_MGR
+    password:
+
+  jpa:
+    show-sql: true
+    generated-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  liquibase:
+    enabled: true
+    changelog: classpath:db.changelog/liquibase-changelog.yaml
+    default-schema: cakesdb
+
+  h2:
+    console:
+      enabled: true
+      path: /dev/h2-console
+
+
+
+
+

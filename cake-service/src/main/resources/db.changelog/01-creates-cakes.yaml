@@ -1,0 +1,24 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: create-cake-1
+      author: prashant
+      changes:
+      - createTable:
+          columns:
+          - column:
+              name: id
+              type: UUID
+              constraints:
+                nullable: false
+                primaryKey: true
+          - column:
+              name: title
+              type: varchar(200)
+          - column:
+              name: description
+              type: varchar(100)
+          - column:
+              name: image
+              type: varchar(300)
+          tableName: cake

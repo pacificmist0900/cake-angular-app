@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-cake-1
+      author: prashant
+      changes:
+        - insert:
+            tableName: cake
+            columns:
+                - column:
+                    name: ID
+                    value: 'bf957820-c588-4499-8303-1a237b5d5935'
+                - column:
+                    name: title
+                    value: 'carrot cake'
+                - column:
+                    name: description
+                    value: 'carrot cake with icing'
+                - column:
+                    name: image
+                    value: 'www.bbc.co.uk'
